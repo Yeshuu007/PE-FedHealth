@@ -1,3 +1,4 @@
+
 @echo off
 cd /d "%~dp0"
 
@@ -6,17 +7,19 @@ echo          PE-FedHealth Project
 echo ==========================================
 echo.
 echo Starting Backend...
-start "PE-FedHealth Backend" cmd /k "py -3.10 -m uvicorn backend.main:app --host 127.0.0.1 --port 8001"
+
+start "PE-FedHealth Backend" cmd /k "cd /d "%~dp0" && py -3.10 -m uvicorn backend.main:app --host 127.0.0.1 --port 8001"
 
 timeout /t 3 /nobreak >nul
 
 echo Starting Frontend...
-start "PE-FedHealth Frontend" cmd /k "cd /d "%~dp0frontend-ui" && npm run dev"
+
+start "PE-FedHealth Frontend" cmd /k "cd /d "%~dp0frontend-ui" && npm run dev -- --host 127.0.0.1 --port 5174"
 
 echo.
 echo ==========================================
-echo Backend:  http://127.0.0.1:8001
-echo Frontend: http://localhost:5174
+echo Backend:  http://127.0.0.1:8001/docs
+echo Frontend: http://127.0.0.1:5174
 echo ==========================================
 echo.
 pause
