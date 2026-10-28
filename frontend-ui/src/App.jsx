@@ -20,7 +20,9 @@ import {
 
 import "./App.css";
 
-const API = "http://127.0.0.1:8001";
+
+const API = "https://pe-fedhealth.onrender.com";
+
 
 const menuItems = [
   { name: "Overview", icon: LayoutDashboard },
