@@ -33,8 +33,9 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://glowing-succotash-4j4r67wvj4j9f57rj-5173.app.github.dev",
-        "https://glowing-succotash-4j4r67wvj4j9f57rj-5174.app.github.dev",
+    "https://peppy-dango-200a9c.netlify.app",
+    "https://glowing-succotash-4j4r67wvj4j9f57rj-5173.app.github.dev",
+    "https://glowing-succotash-4j4r67wvj4j9f57rj-5174.app.github.dev",
     ],
     allow_credentials=False,
     allow_methods=["*"],
