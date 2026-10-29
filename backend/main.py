@@ -38,6 +38,7 @@ app.add_middleware(
             "https://glowing-succotash-4j4r67wvj4j9f57rj-5174.app.github.dev",
             "http://localhost:5173",
             "http://127.0.0.1:5173",
+            "http://127.0.0.1:5174",
         ],
     allow_credentials=False,
     allow_methods=["*"],
